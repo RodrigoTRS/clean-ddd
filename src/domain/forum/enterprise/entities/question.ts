@@ -67,7 +67,7 @@ export class Question extends Entity<QuestionProps> {
   }
 
   set bestAnswerId(id: UniqueEntityID | undefined) {
-    this.bestAnswerId = id
+    this.props.bestAnswerId = id
     this.touch()
   }
 
