@@ -1,4 +1,4 @@
-import { PaginationPrams } from "@/core/repositories/pagination-params";
+import { PaginationParams } from "@/core/repositories/pagination-params";
 import { Answer } from "../../enterprise/entities/answer";
 
 export interface AnswersRepository {
@@ -6,5 +6,5 @@ export interface AnswersRepository {
   delete(answer: Answer): Promise<void>
   save(answer: Answer): Promise<void>
   findById(id: string): Promise<Answer | null>
-  findManyByQuestionId(questionId: string, params: PaginationPrams): Promise<Answer[]>
+  findManyByQuestionId(questionId: string, params: PaginationParams): Promise<Answer[]>
 }
